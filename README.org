@@ -4,7 +4,7 @@
 
 ** Table of Contents                                      :TOC_5_gh:noexport:
   - [[#description][Description]]
-  - [[#features][Features:]]
+  - [[#features][Features]]
   - [[#install][Install]]
     - [[#layer][Layer]]
     - [[#idris2][Idris2]]
@@ -19,7 +19,7 @@
 ** Description
 This layer adds support for the [[https://www.idris-lang.org/][Idris2]] language to Spacemacs, and is completely based on the [[https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Blang/idris][Idris layer]].
 
-** Features:
+** Features
 - wrapper around the official [[https://github.com/idris-community/idris2-mode][idris2-mode]]
 - follows the same command list as Idris Spacemacs layer
 - extends with new Idris2 features
@@ -32,7 +32,7 @@ This layer adds support for the [[https://www.idris-lang.org/][Idris2]] language
     git clone --recursive git@github.com:cyberglot/idris2-spacemacs.git .emacs.d/private/idris2
 #+end_src
 
-2. Activate the layer in your `~/.spacemacs`
+2. Activate the layer in your =~/.spacemacs=
 #+begin_src
     dotspacemacs-configuration-layers '(... syntax-checking haskell idris idris2)
 #+end_src
