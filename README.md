@@ -1,1 +1,0 @@
-# idris2-spacemacs
