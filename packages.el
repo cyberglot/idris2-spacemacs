@@ -26,8 +26,7 @@
 
 
 (setq idris2-packages
-      '(
-        company
+      '(company
         idris2-mode
         golden-ratio
         popwin
@@ -71,7 +70,7 @@
       (spacemacs/declare-prefix-for-mode 'idris2-mode "mi" "idris2/editing")
       (spacemacs/declare-prefix-for-mode 'idris2-mode "mh" "idris2/documentation")
       (spacemacs/declare-prefix-for-mode 'idris2-mode "ms" "idris2/repl")
-      (spacemacs/declare-prefix-for-mode 'idris2-mode "mm" "idris2/term")
+      ;; (spacemacs/declare-prefix-for-mode 'idris2-mode "mm" "idris2/term")
 
       (spacemacs/set-leader-keys-for-major-mode 'idris2-mode
         ;; Shorthands: rebind the standard evil-mode combinations to the local
@@ -83,6 +82,8 @@
         "r" 'idris2-load-file
         "t" 'idris2-type-at-point
         "w" 'idris2-make-with-block
+        "n" 'idris2-next-error
+        "p" 'idris2-previous-error
 
         ;; ipkg.
         "bc" 'idris2-ipkg-build
@@ -94,34 +95,37 @@
         "ia" 'idris2-proof-search
         "ic" 'idris2-case-dwim
         "ie" 'idris2-make-lemma
-        "im" 'idris2-add-missing
-        "ir" 'idris2-refine
+        ;; "im" 'idris2-add-missing
+        ;; "ir" 'idris2-refine
         "is" 'idris2-add-clause
         "iw" 'idris2-make-with-block
 
         ;; Documentation.
-        "ha" 'idris2-apropos
+        ;; "ha" 'idris2-apropos
         "hd" 'idris2-docs-at-point
         "hs" 'idris2-type-search
-        "ht" 'idris2-type-at-point
+        ;; "ht" 'idris2-type-at-point
+        "hw" 'idris2-jump-to-def
+        "hj" 'idris2-jump-to-def-same-window
 
         ;; Active term manipulations.
-        "mn" 'idris2-normalise-term
-        "mi" 'idris2-show-term-implicits
-        "mh" 'idris2-hide-term-implicits
-        "mc" 'idris2-show-core-term
+        ;; "mn" 'idris2-normalise-term
+        ;; "mi" 'idris2-show-term-implicits
+        ;; "mh" 'idris2-hide-term-implicits
+        ;; "mc" 'idris2-show-core-term
 
         ;; REPL
-        "'"  'idris2-repl
+        ;; "'"  'idris2-repl
         "sb" 'idris2-load-file
         "sB" 'spacemacs/idris2-load-file-and-focus
-        "si" 'idris2-repl
+        ;; "si" 'idris2-repl
         "sn" 'idris2-load-forward-line
         "sN" 'spacemacs/idris2-load-forward-line-and-focus
-        "sp" 'idris2-load-backward-line
+        ;; "sp" 'idris2-load-backward-line
         "sP" 'spacemacs/idris2-load-backward-line-and-focus
         "ss" 'idris2-pop-to-repl
-        "sq" 'idris2-quit)))
+        ;; "sq" 'idris2-quit
+        )))
 
   ;; To suppress auto-indentation
   (add-to-list 'spacemacs-indent-sensitive-modes 'idris2-mode)
