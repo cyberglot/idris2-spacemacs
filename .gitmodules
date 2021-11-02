@@ -1,0 +1,3 @@
+[submodule "local/idris2-mode"]
+	path = local/idris2-mode
+	url = git@github.com:idris-community/idris2-mode.git
