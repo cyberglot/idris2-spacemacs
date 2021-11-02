@@ -27,7 +27,7 @@
 
 (setq idris2-packages
       '(company
-        idris2-mode
+        (idris2-mode :location local)
         golden-ratio
         popwin
         ))
