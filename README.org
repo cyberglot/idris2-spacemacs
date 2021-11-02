@@ -13,7 +13,6 @@
   - [[#interactive-editing][Interactive editing]]
   - [[#documentation][Documentation]]
   - [[#repl][REPL]]
-  - [[#active-term-manipulations][Active term manipulations]]
   - [[#build-system][Build system]]
 
 ** Description
@@ -55,6 +54,8 @@ are reproduced under the local leader.
 | ~SPC m r~   | Load current buffer into Idris.                                                 |
 | ~SPC m t~   | Get the type for the identifier under point.                                    |
 | ~SPC m w~   | Add a with block for the pattern-match clause under point.                      |
+| ~SPC m n~   | Next error.                                                                     |
+| ~SPC m p~   | Previous error.                                                                 |
 
 ** Interactive editing
 
@@ -63,8 +64,8 @@ are reproduced under the local leader.
 | ~SPC m i a~ | Attempt to solve a metavariable automatically.                                             |
 | ~SPC m i c~ | Case split the pattern variable under point, or make it into a case expression.            |
 | ~SPC m i e~ | Extract a metavariable or provisional definition name to an explicit top level definition. |
-| ~SPC m i m~ | Add missing pattern-match cases to an existing definition.                                 |
-| ~SPC m i r~ | Refine by name, without recursive proof search.                                            |
+# | ~SPC m i m~ | Add missing pattern-match cases to an existing definition.                                 |
+# | ~SPC m i r~ | Refine by name, without recursive proof search.                                            |
 | ~SPC m i s~ | Create an initial pattern match clause for a type declaration.                             |
 | ~SPC m i w~ | Add a with block for the pattern-match clause under point.                                 |
 
@@ -72,10 +73,12 @@ are reproduced under the local leader.
 
 | Key binding | Description                                           |
 |-------------+-------------------------------------------------------|
-| ~SPC m h a~ | Search the documentation for a string.                |
+# | ~SPC m h a~ | Search the documentation for a string.                |
 | ~SPC m h d~ | Search the documentation for the name under point.    |
 | ~SPC m h s~ | Search the documentation regarding a particular type. |
 | ~SPC m h t~ | Get the type for the identifier under point.          |
+| ~SPC m h j~ | Jump to definition.                                   |
+| ~SPC m h w~ | Jump to definition (New window).                      |
 
 ** REPL
 
@@ -83,22 +86,22 @@ are reproduced under the local leader.
 |-------------+----------------------------------------------------------------------------------------|
 | ~SPC m s b~ | Load the current buffer into Idris.                                                    |
 | ~SPC m s B~ | Load the current buffer into Idris and switch to REPL in insert state                  |
-| ~SPC m s i~ | Start Idris inferior process                                                           |
+# | ~SPC m s i~ | Start Idris inferior process                                                           |
 | ~SPC m s n~ | Extend the region to be loaded one line at a time.                                     |
 | ~SPC m s N~ | Extend the region to be loaded one line at a time and switch to REPL in insert state   |
-| ~SPC m s p~ | Contract the region to be loaded one line at a time                                    |
+# | ~SPC m s p~ | Contract the region to be loaded one line at a time                                    |
 | ~SPC m s P~ | Contract the region to be loaded one line at a time and switch to REPL in insert state |
 | ~SPC m s s~ | Switch to REPL buffer                                                                  |
-| ~SPC m s q~ | Quit the Idris process                                                                 |
+# | ~SPC m s q~ | Quit the Idris process                                                                 |
 
-** Active term manipulations
+# ** Active term manipulations
 
-| Key binding | Description                                   |
-|-------------+-----------------------------------------------|
-| ~SPC m m c~ | Show the core language for the term at point. |
-| ~SPC m m i~ | Show implicits for the term at point.         |
-| ~SPC m m h~ | Hide implicits for the term at point.         |
-| ~SPC m m n~ | Normalize the term at point.                  |
+# | Key binding | Description                                   |
+# |-------------+-----------------------------------------------|
+# | ~SPC m m c~ | Show the core language for the term at point. |
+# | ~SPC m m i~ | Show implicits for the term at point.         |
+# | ~SPC m m h~ | Hide implicits for the term at point.         |
+# | ~SPC m m n~ | Normalize the term at point.                  |
 
 ** Build system
 
