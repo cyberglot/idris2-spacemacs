@@ -25,10 +25,12 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-(defvar idris2-packages
+(defconst idris2-packages
   '(
     company
-    (idris2-mode :location local)
+    (idris2-mode :location (recipe
+                            :fetcher github
+                            :repo "idris-community/idris2-mode"))
     golden-ratio
     popwin
     ))
@@ -36,7 +38,7 @@
 (defun idris2/post-init-company ()
   (spacemacs|add-company-backends
     :backends company-capf
-    :modes idris2-mode idris2-repl-mode))
+    :modes idris2-mode))
 
 (defun idris2/init-idris2-mode ()
   (use-package idris2-mode
