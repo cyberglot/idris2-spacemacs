@@ -25,12 +25,13 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-(setq idris2-packages
-      '(company
-        (idris2-mode :location local)
-        golden-ratio
-        popwin
-        ))
+(defvar idris2-packages
+  '(
+    company
+    (idris2-mode :location local)
+    golden-ratio
+    popwin
+    ))
 
 (defun idris2/post-init-company ()
   (spacemacs|add-company-backends
