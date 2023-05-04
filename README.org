@@ -36,6 +36,11 @@ This layer adds support for the [[https://www.idris-lang.org/][Idris2]] language
     dotspacemacs-configuration-layers '(... idris2)
 #+end_src
 
+Or you can add it in =dotspacemacs-additional-packages=:
+#+begin_src
+(idris2-mode :location (recipe :fetcher github :repo "cyberglot/idris2-spacemacs")
+#+end_src
+
 *** Idris2
 Idris2 can be installed with binaries available for some platforms at
 [[https://www.idris-lang.org/pages/download.html][https://www.idris-lang.org/pages/download.html]].
